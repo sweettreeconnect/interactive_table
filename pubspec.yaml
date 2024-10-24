@@ -2,6 +2,8 @@ name: interactive_table
 description: "A DataTable like Table with built in support for sticky headers, zoom and scroll"
 version: 0.0.18
 homepage: https://github.com/hlvs-apps/interactive_table
+publish_to: none
+
 
 platforms:
   android:
@@ -19,7 +21,11 @@ dependencies:
   flutter:
     sdk: flutter
   vector_math: ^2.1.4
-  interactive_viewer_2: ^0.0.10
+  interactive_viewer_2:
+    git: 
+      url: https://github.com/sweettreeconnect/interactive_viewer_2.git
+      ref: main
+
 
 dev_dependencies:
   flutter_test:

@@ -24,6 +24,8 @@ class InteractiveDataTable extends BetterInteractiveViewerBase {
   /// In most use cases you can replace the [DataTable] with the [InteractiveDataTable] and it should work without any major changes.
   InteractiveDataTable({
     super.key,
+    super.scaleVerticalEnabled,
+    super.scaleHorizontalEnabled,
     required this.transformedDataTableBuilder,
     super.allowNonCoveringScreenZoom,
     super.panAxis,
@@ -40,6 +42,8 @@ class InteractiveDataTable extends BetterInteractiveViewerBase {
     this.zoomToWidth = true,
   });
 
+  
+
   /// The table configuration.
   final TransformedDataTableBuilder transformedDataTableBuilder;
 
@@ -55,6 +59,7 @@ class _InteractiveDataTableState
     extends BetterInteractiveViewerBaseState<InteractiveDataTable> {
   @override
   final GlobalKey<TransformedDataTableState> childKey = GlobalKey();
+  
 
   @override
   void updateTransform() {
